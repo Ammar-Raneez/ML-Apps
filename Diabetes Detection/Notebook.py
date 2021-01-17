@@ -80,7 +80,8 @@ st.subheader("Model Test Accuracy Score: ")
 st.write(str(math.floor(accuracy_score(Y_test, randomForestClassifier.predict(X_test)) * 100)) + "%")
 st.subheader("Model Confusion Matrix: ")
 st.write(confusion_matrix(Y_test, randomForestClassifier.predict(X_test)))
-
+st.subheader("Model Evaluation Report: ")
+st.write(classification_report(Y_test, randomForestClassifier.predict(X_test)))
 
 #Store model predictions
 prediction = randomForestClassifier.predict(input_data)
